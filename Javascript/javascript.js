@@ -55,3 +55,8 @@
 
 //Closure value ko yaad nahi rakhta,
 //variable ki memory location ko yaad rakhta hai.
+
+
+//call -> fnc chalata hai and this ki value set karta hai
+//apply -> wahi karta hai jo call karta hai and arguments mein pahli value this ki and doosri value array hoi hai
+//bind -> wahi karta hai jo call karta hai and aapko naya fnc deta hai
