@@ -60,3 +60,10 @@
 //call -> fnc chalata hai and this ki value set karta hai
 //apply -> wahi karta hai jo call karta hai and arguments mein pahli value this ki and doosri value array hoi hai
 //bind -> wahi karta hai jo call karta hai and aapko naya fnc deta hai
+
+// “Class ke methods har object ke andar copy nahi hote,
+// wo prototype me ek hi jagah store hote hain,
+// aur saare objects wahi same method use karte hain.”
+// mtlb
+// “Data = object ke paas,
+// Method = prototype ke paas.”
