@@ -67,3 +67,32 @@
 // mtlb
 // “Data = object ke paas,
 // Method = prototype ke paas.”
+
+//callback
+// function abcd(fn){
+//    return fn()
+// }
+// let val = abcd(function(){
+//     return "hey"
+// })
+// console.log(val)
+
+// function abcd(fn1){
+//     fn1(function(){
+//         return "hey"
+//     })
+// }
+
+// let val = abcd(function(fn2){
+//     fn2()
+// })
+// console.log(val)
+
+function abcd(address,cb){
+    let val = address
+    cb(val)
+}
+
+abcd('he',function(details){
+    console.log(details)
+})
