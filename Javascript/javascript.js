@@ -88,11 +88,30 @@
 // })
 // console.log(val)
 
-function abcd(address,cb){
-    let val = address
-    cb(val)
+// function abcd(address,cb){
+//     let val = address
+//     cb(val)
+// }
+
+// abcd('he',function(details){
+//     console.log(details)
+// })
+
+
+function instagramSeDataLaao(username,cb){
+    setTimeout(() => {
+       cb({uid:11,username:username}) 
+    }, 3000);
 }
 
-abcd('he',function(details){
-    console.log(details)
+function metaPeJaaoDataLaao(uid,cb){
+    setTimeout(() => {
+        cb(["img1","img2"])
+    }, 4000);
+}
+
+instagramSeDataLaao("yash",function(data){
+    metaPeJaaoDataLaao(data.uid,function(images){
+        console.log(data.uid,images)
+    })
 })
