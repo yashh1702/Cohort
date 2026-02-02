@@ -1,0 +1,17 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+#box{
+  width: 150px;
+  height: 100px;
+  background: steelblue;
+  color: white;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
