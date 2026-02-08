@@ -9,11 +9,17 @@ const App = () => {
   const [imageURL, setImageURL] = useState("")
   const [userDesc, setUserDesc] = useState("")
 
-  const [allUsers, setAllUsers] = useState([])
+  const localData = JSON.parse(localStorage.getItem('all-users')) || []
+
+  const [allUsers, setAllUsers] = useState(localData)
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setAllUsers([...allUsers,{ userName, imageURL, userRole, userDesc }])
+
+    let oldUsers = [...allUsers]
+    oldUsers.push({ userName, imageURL, userRole, userDesc })
+    setAllUsers(oldUsers)
+    localStorage.setItem('all-users',JSON.stringify(oldUsers))
 
     setUserName("")
     setImageURL("")
@@ -24,8 +30,8 @@ const App = () => {
   const removeUser = (index) =>{
     const copyUser = [...allUsers]
     copyUser.splice(index,1)
-
     setAllUsers(copyUser)
+    localStorage.setItem('all-users',JSON.stringify(copyUser))
   }
 
 
