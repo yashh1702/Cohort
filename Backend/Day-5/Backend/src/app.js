@@ -1,8 +1,10 @@
 const express = require("express")
 const noteModel = require("./models/note.model.js")
+const cors = require("cors")
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 
 // Creating the note
