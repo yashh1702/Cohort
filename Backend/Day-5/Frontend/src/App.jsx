@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:3000/api/notes";
+const API = "https://cohort-ji6u.onrender.com/api/notes";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
