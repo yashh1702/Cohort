@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+    </div>
+
+    <script>
+      const users = [
+        {
+          name: "Aarav Sharma",
+          image: "https://randomuser.me/api/portraits/men/1.jpg",
+        },
+        {
+          name: "Riya Verma",
+          image: "https://randomuser.me/api/portraits/women/2.jpg",
+        },
+        {
+          name: "Kabir Singh",
+          image: "https://randomuser.me/api/portraits/men/3.jpg",
+        },
+        {
+          name: "Ananya Gupta",
+          image: "https://randomuser.me/api/portraits/women/4.jpg",
+        },
+        {
+          name: "Vihaan Mehta",
+          image: "https://randomuser.me/api/portraits/men/5.jpg",
+        },
+        {
+          name: "Ishita Jain",
+          image: "https://randomuser.me/api/portraits/women/6.jpg",
+        },
+        {
+          name: "Arjun Patel",
+          image: "https://randomuser.me/api/portraits/men/7.jpg",
+        },
+        {
+          name: "Meera Nair",
+          image: "https://randomuser.me/api/portraits/women/8.jpg",
+        },
+        {
+          name: "Rohan Das",
+          image: "https://randomuser.me/api/portraits/men/9.jpg",
+        },
+        {
+          name: "Saanvi Kapoor",
+          image: "https://randomuser.me/api/portraits/women/10.jpg",
+        },
+      ];
+      const main = document.querySelector(".main");
+
+      users.forEach((user) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+      <img src="${user.image}" alt="${user.name}" />
+      <div class="bottom">
+        <h4>${user.name}</h4>
+        <h3><i class="ri-heart-3-fill"></i></h3>
+      </div>
+  `;
+
+        main.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
